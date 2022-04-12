@@ -1,0 +1,34 @@
+texto = input('Ingresa el texto que deseas analizar: \n')
+
+lower = texto.lower()
+
+letra1 = input('Ingresa la primera letra de tu elección: \n').lower()
+letra2 = input('Ingresa la segunda letra de tu elección: \n').lower()
+letra3 = input('Ingresa la tercera letra de tu elección: \n').lower()
+
+cuantas_input1 = lower.count(letra1)
+cuantas_input2 = lower.count(letra2)
+cuantas_input3 = lower.count(letra3)
+
+print(f'La letra {letra1} aparece {cuantas_input1} veces en tu texto.')
+print(f'La letra {letra2} aparece {cuantas_input2} veces en tu texto.')
+print(f'La letra {letra3} aparece {cuantas_input3} veces en tu texto.')
+
+convertir = lower.split()
+longitud = len(convertir)
+print(f'A lo largo de todo el texto, hay {longitud} palabras.')
+
+primera_letra = lower[0]
+ultima_letra = lower[-1]
+print(f'La primera letra del texto es: {primera_letra.upper()}')
+print(f'La última letra del texto es: {ultima_letra.upper()}')
+
+convertir.reverse()
+a = convertir
+formato = ' '.join(a)
+print(f'''El texto invertido se ve de esta manera:\n
+{formato}\n''')
+
+buscar_python = 'python' in texto
+dic = {True:"sí", False:"no"}
+print(f"La palabra 'Python' {dic[buscar_python]} se encuentra en el texto")
